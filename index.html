@@ -50,9 +50,12 @@
   --e-inout:cubic-bezier(0.65,0,0.35,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--ivory);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img{display:block;max-width:100%}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{font-family:var(--sans);font-weight:300;color:var(--text);background:var(--ivory);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:clip;max-width:100vw}
+img{display:block;max-width:100%;height:auto}
+/* defensive: long strings & grid items don't blow out the layout */
+p,h1,h2,h3,h4,li,td,a{overflow-wrap:break-word;word-wrap:break-word}
+.disclaimer,.foot-grid>div{overflow-wrap:anywhere}
 h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15}
 
 /* ---------- scroll progress ---------- */
@@ -81,9 +84,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 0;transition:ba
 @keyframes navIn{to{transform:none}}
 nav.solid{background:rgba(20,40,34,.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:12px 0;box-shadow:0 1px 0 rgba(195,165,114,.25)}
 .nav-inner{max-width:1320px;margin:0 auto;padding:0 var(--s4);display:flex;align-items:center;justify-content:space-between}
-.nav-brand{color:#fff;text-decoration:none;line-height:1.25}
-.nav-brand .nb-top{font-family:var(--serif);font-size:21px;letter-spacing:.06em}
-.nav-brand .nb-sub{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-soft)}
+.nav-brand{color:#fff;text-decoration:none;line-height:1.25;min-width:0;flex:1 1 auto;max-width:calc(100% - 44px)}
+.nav-brand .nb-top{font-family:var(--serif);font-size:21px;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nav-brand .nb-sub{font-size:9px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav-links{display:flex;gap:34px;align-items:center;list-style:none}
 .nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;position:relative;padding:4px 0;transition:color var(--d-med) var(--e-out)}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:100% 50%;transition:transform var(--d-med) var(--e-out)}
@@ -315,16 +318,19 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
 @media(max-width:680px){
   :root{--s6:64px;--s7:88px}
   .wrap{padding:0 var(--s3)}
-  .nav-links{position:fixed;inset:0;background:var(--green-ink);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform var(--d-slow) var(--e-out)}
+  .nav-inner{padding:0 var(--s3)}
+  .nav-links{position:fixed;inset:0;background:var(--green-ink);flex-direction:column;justify-content:center;gap:30px;transform:translateX(100%);transition:transform var(--d-slow) var(--e-out);padding:var(--s4)}
   .nav-links.open{transform:none}
   .nav-links a{font-size:16px}
-  .nav-cta-li{display:none}
+  .nav-cta-li{display:list-item}
+  .nav-cta-li .btn{padding:14px 32px}
   .hamburger{display:block;z-index:110}
   .hamburger.x span:nth-child(1){top:10px;transform:rotate(45deg)}
   .hamburger.x span:nth-child(2){opacity:0}
   .hamburger.x span:nth-child(3){top:10px;transform:rotate(-45deg)}
-  .hero-content{padding-bottom:110px}
-  .hero-strip{gap:var(--s3)}
+  .hero-content{padding:120px var(--s3) 130px}
+  .hero-strip{gap:var(--s3);margin-top:var(--s3)}
+  .hero-strip strong{font-size:24px}
   .amen-grid,.dev-cards{grid-template-columns:1fr}
   .wellness-grid{grid-template-columns:1fr 1fr}
   .car-slide img{height:300px}
@@ -333,6 +339,67 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
   .float-cta{display:block}
   footer{padding-bottom:96px}
   .plan-tab{min-width:50%}
+  .img-frame img{height:360px}
+}
+@media(max-width:480px){
+  :root{--s4:24px;--s5:42px;--s6:56px;--s7:72px}
+  .wrap{padding:0 20px}
+  .nav-inner{padding:0 18px;gap:12px}
+  .nav-brand{max-width:calc(100% - 42px)}
+  .nav-brand .nb-top{font-size:17px;letter-spacing:.04em}
+  .nav-brand .nb-sub{font-size:8.5px;letter-spacing:.22em}
+  .hero-content{padding:104px 20px 120px}
+  .hero h1{font-size:clamp(34px,9.6vw,46px);max-width:100%}
+  .hero-sub{font-size:12.5px;letter-spacing:.14em;margin-top:var(--s3)}
+  .hero-ctas{gap:10px;width:100%}
+  .hero-ctas .btn{padding:13px 22px;font-size:11px;letter-spacing:.18em;flex:1 1 auto;text-align:center}
+  .hero-strip{gap:14px 22px;padding-top:18px}
+  .hero-strip div{font-size:10.5px;letter-spacing:.14em}
+  .hero-strip strong{font-size:21px}
+  .band,.wellness,.gallery,.res,.master{padding:var(--s7) 0}
+  .split h2,.wellness h2,.amen-head h2,.res h2,.master h2,.gallery h2,.band h2,.loc-grid+*{font-size:clamp(26px,7.4vw,36px)}
+  .split p{font-size:15px}
+  .marriott-note{padding:var(--s2);font-size:13.5px}
+  .img-frame img{height:280px}
+  .wellness-image{min-height:240px}
+  .wellness-grid{grid-template-columns:1fr}
+  .wellness-grid>div{padding:18px;font-size:12.5px}
+  .wellness-grid span{font-size:17px}
+  .car-slide{padding:0 6px}
+  .car-slide img{height:230px}
+  .car-cap{flex-direction:column;gap:4px;align-items:flex-start}
+  .car-cap h3{font-size:18px}
+  .car-cap span{font-size:10px;letter-spacing:.2em}
+  .car-btn{width:44px;height:44px;font-size:18px}
+  .amen-card h3{font-size:21px}
+  .amen-card li{font-size:13.5px}
+  .amen-banner img{height:220px}
+  .plan-tabs{flex-direction:column;border:none;gap:8px}
+  .plan-tab{min-width:100%;border:1px solid rgba(195,165,114,.4);padding:13px;font-size:11.5px;letter-spacing:.14em}
+  .plan-panel img{padding:14px}
+  .plan-meta h3{font-size:26px}
+  .plan-meta td{font-size:13.5px;padding:10px 0}
+  .plan-meta td:last-child{font-size:16px}
+  .spec-line{font-size:12.5px}
+  .loc-list li{font-size:14px;padding:11px 0}
+  .loc-list span{font-size:15px;padding-left:12px}
+  .master-points li{font-size:14px;padding-left:24px}
+  .master-points li::before{width:14px;top:22px}
+  .dev-card{padding:var(--s3)}
+  .dev-card h3{font-size:20px}
+  .final h2{font-size:clamp(28px,8vw,40px)}
+  .final p{font-size:14px;line-height:1.6}
+  footer{font-size:12px;padding-top:var(--s4)}
+  .foot-grid h4{font-size:17px}
+  .disclaimer{font-size:10.5px;line-height:1.7}
+  .modal{padding:18px}
+  .modal-box{padding:42px 22px}
+  .modal-box h3{font-size:24px}
+  .modal-box .m-sub{font-size:11px;letter-spacing:.2em}
+  .field input,.field select{font-size:14px;padding:12px 2px}
+  .modal-box .btn{padding:13px 20px;font-size:11px}
+  .m-success h3{font-size:22px}
+  .m-success p{font-size:13px}
 }
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}
@@ -358,7 +425,7 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
       <li><a href="#amenities">Amenities</a></li>
       <li><a href="#residences">Residences</a></li>
       <li><a href="#location">Location</a></li>
-      <li class="nav-cta-li"><button class="btn nav-cta" onclick="openModal('Enquire Now')">Enquire</button></li>
+      <li class="nav-cta-li" style="list-style:none"><button class="btn nav-cta" onclick="openModal('Enquire Now')">Enquire</button></li>
     </ul>
     <button class="hamburger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
