@@ -124,10 +124,11 @@ header.hero{position:relative;min-height:100svh;display:flex;align-items:flex-en
 .hero-kicker::before{content:"";width:54px;height:1px;background:var(--gold);flex:none;transform:scaleX(0);transform-origin:0 50%;animation:growX 1.1s var(--e-out) 1000ms forwards}
 @keyframes fadeIn{to{opacity:1}}
 @keyframes growX{to{transform:scaleX(1)}}
-.hero h1{font-size:clamp(44px,min(6.4vw,9.5svh),86px);font-weight:400;letter-spacing:.01em;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.45)}
-.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:bottom}
-.hero h1 .w i{font-style:inherit;display:inline-block;transform:translateY(112%);animation:wordUp 1s var(--e-out) forwards;animation-delay:calc(1150ms + var(--wd))}
-.hero h1 em .w i{font-style:italic;color:var(--gold-soft)}
+.hero h2.hero-display{font-size:clamp(44px,min(6.4vw,9.5svh),86px);font-weight:400;letter-spacing:.01em;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.45);font-family:var(--serif)}
+.hero h2.hero-display .w{display:inline-block;overflow:hidden;vertical-align:bottom}
+.hero h2.hero-display .w i{font-style:inherit;display:inline-block;transform:translateY(112%);animation:wordUp 1s var(--e-out) forwards;animation-delay:calc(1150ms + var(--wd))}
+.hero h2.hero-display em .w i{font-style:italic;color:var(--gold-soft)}
+.hero h1.hero-kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 var(--s3);font-weight:500;font-family:var(--sans);text-shadow:0 1px 10px rgba(0,0,0,.65)}
 @keyframes wordUp{to{transform:none}}
 .hero-sub{margin-top:var(--s3);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);max-width:560px;text-shadow:0 1px 14px rgba(0,0,0,.5);opacity:0;transform:translateY(12px);animation:riseIn .9s var(--e-out) 2050ms forwards}
 @keyframes riseIn{to{opacity:1;transform:none}}
@@ -362,7 +363,8 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
   .nav-phone{padding:6px 9px;font-size:11px;letter-spacing:.01em;gap:5px}
   .nav-phone-ic{width:11px;height:11px}
   .hero-content{padding:104px 20px 120px}
-  .hero h1{font-size:clamp(34px,9.6vw,46px);max-width:100%}
+  .hero h2.hero-display{font-size:clamp(34px,9.6vw,46px);max-width:100%}
+  .hero h1.hero-kicker{font-size:10px;letter-spacing:.3em}
   .hero-sub{font-size:12.5px;letter-spacing:.14em;margin-top:var(--s3)}
   .hero-ctas{gap:10px;width:100%}
   .hero-ctas .btn{padding:13px 22px;font-size:11px;letter-spacing:.18em;flex:1 1 auto;text-align:center}
@@ -417,7 +419,7 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important;transition-delay:0ms!important}
   [data-rv]{opacity:1;transform:none;filter:none}
-  .hero h1 .w i{transform:none}
+  .hero h2.hero-display .w i{transform:none}
   html{scroll-behavior:auto}
 }
 </style>
@@ -433,6 +435,98 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
 </script>
 
 <meta name="google-site-verification" content="DHa7oix33Eeo4dlECN7MsxSe5ztRDKJUpNVZY3gHjOY" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.thewestinresidences.co/#organization",
+      "name": "The Westin Residences Gurugram",
+      "url": "https://www.thewestinresidences.co/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thewestinresidences.co/logoblack.webp"
+      },
+      "image": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp",
+      "description": "Authorized channel partner for The Westin Residences by Whiteland in Sector 103, Dwarka Expressway, Gurugram.",
+      "telephone": "+919910661395",
+      "areaServed": {
+        "@type": "City",
+        "name": "Gurugram"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+919910661395",
+        "contactType": "Sales",
+        "availableLanguage": ["English", "Hindi"]
+      },
+      "sameAs": [
+        "https://www.facebook.com/yourpage",
+        "https://www.instagram.com/yourpage",
+        "https://www.linkedin.com/company/yourcompany"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.thewestinresidences.co/#website",
+      "url": "https://www.thewestinresidences.co/",
+      "name": "The Westin Residences Gurugram",
+      "publisher": { "@id": "https://www.thewestinresidences.co/#organization" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.thewestinresidences.co/#homepage",
+      "url": "https://www.thewestinresidences.co/",
+      "name": "The Westin Residences Gurugram | Luxury Apartments",
+      "isPartOf": { "@id": "https://www.thewestinresidences.co/#website" },
+      "about": { "@id": "https://www.thewestinresidences.co/#project" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp"
+      }
+    },
+    {
+      "@type": "ApartmentComplex",
+      "@id": "https://www.thewestinresidences.co/#project",
+      "name": "The Westin Residences",
+      "url": "https://www.thewestinresidences.co/",
+      "description": "Luxury branded residences by Whiteland in Sector 103, Dwarka Expressway, Gurugram, offering premium 3 and 4 BHK apartments with world-class amenities.",
+      "image": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp",
+      "provider": { "@id": "https://www.thewestinresidences.co/#organization" },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Sector 103",
+        "addressLocality": "Gurugram",
+        "addressRegion": "Haryana",
+        "postalCode": "122002",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "28.5028",
+        "longitude": "76.9976"
+      },
+      "amenityFeature": [
+        { "@type": "LocationFeatureSpecification", "name": "Infinity Pool", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Clubhouse", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Fitness Centre", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Spa", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Concierge Services", "value": true },
+        { "@type": "LocationFeatureSpecification", "name": "Landscaped Gardens", "value": true }
+      ],
+      "petsAllowed": true
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -466,13 +560,14 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
   <div class="hero-bg" data-px="0.22"><img src="images/hero-night-pool.webp" alt="Westin Residences pool deck by night" width="2400" height="1600" fetchpriority="high" decoding="async"></div>
   <div class="hero-scrim"></div>
   <div class="hero-content">
-    <h1>
+    <h1 class="hero-kicker">The Westin Residences</h1>
+    <h2 class="hero-display">
       <span class="w"><i style="--wd:0ms">An</i></span>
       <span class="w"><i style="--wd:90ms">Oasis</i></span>
       <span class="w"><i style="--wd:180ms">of</i></span><br>
       <em><span class="w"><i style="--wd:300ms">Serene</i></span>
       <span class="w"><i style="--wd:420ms">Elegance</i></span></em>
-    </h1>
+    </h2>
     <p class="hero-sub">Marriott International's legendary hospitality, now a place to call home</p>
     <div class="hero-ctas">
       <button class="btn fill" onclick="openModal('Book a Private Visit')">Book a Private Visit</button>
