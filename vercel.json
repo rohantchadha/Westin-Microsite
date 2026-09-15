@@ -1,9 +1,25 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
-      "has": [{ "type": "host", "value": "westin-microsite.vercel.app" }],
-      "destination": "https://www.thewestinresidences.co/:path*",
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "westin-microsite.vercel.app"
+        }
+      ],
+      "destination": "https://www.thewestinresidences.co/",
+      "permanent": true
+    },
+    {
+      "source": "/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "westin-microsite.vercel.app"
+        }
+      ],
+      "destination": "https://www.thewestinresidences.co/:path+",
       "permanent": true
     }
   ]
