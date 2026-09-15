@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "westin-microsite.vercel.app" }],
+      "destination": "https://www.thewestinresidences.co/:path*",
+      "permanent": true
+    }
+  ]
+}

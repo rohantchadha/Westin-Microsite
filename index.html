@@ -432,6 +432,13 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
   gtag('js', new Date());
 
   gtag('config', 'G-HPL2ECR67S');
+
+  // Lead tracking: phone and WhatsApp taps
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href*="wa.me/"]');
+    if (!a) return;
+    gtag('event', a.href.indexOf('tel:') === 0 ? 'lead_phone_click' : 'lead_whatsapp_click', { page_path: location.pathname });
+  });
 </script>
 
 <meta name="google-site-verification" content="DHa7oix33Eeo4dlECN7MsxSe5ztRDKJUpNVZY3gHjOY" />
@@ -1003,6 +1010,7 @@ async function submitLead(e){
   }catch(ex){console.error('Lead submission failed:',ex)}
   btn.disabled=false;btn.textContent=originalText;
   if(ok){
+    if(window.gtag)gtag('event','lead_form_submit',{lead_source:fd.get('source')||'Enquiry',page_path:location.pathname});
     document.getElementById('mForm').style.display='none';
     document.getElementById('mSuccess').classList.add('show');
     setTimeout(closeModal,4500);
