@@ -4,14 +4,20 @@
 
   <url>
        <loc>https://www.thewestinresidences.co/</loc>
-       <lastmod>2026-07-16T12:49:12+00:00</lastmod>
+       <lastmod>2026-09-20T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>1.0000</priority>
   </url>
   <url>
        <loc>https://www.thewestinresidences.co/blog/westin-residences-gurugram-guide.html</loc>
-       <lastmod>2026-07-22T06:36:07+00:00</lastmod>
+       <lastmod>2026-09-20T00:00:00+00:00</lastmod>
        <changefreq>daily</changefreq>
        <priority>0.8000</priority>
+  </url>
+  <url>
+       <loc>https://www.thewestinresidences.co/westin-residences-floor-plan.html</loc>
+       <lastmod>2026-09-20T00:00:00+00:00</lastmod>
+       <changefreq>weekly</changefreq>
+       <priority>0.9000</priority>
   </url>
 </urlset>

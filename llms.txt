@@ -12,8 +12,8 @@ The WESTIN Residence by Marriott offers ultra-luxury 3 BHK and 4 BHK residences 
 * Project status: New Launch
 * Residential configurations: 3 BHK and 4 BHK
 * Starting price advertised on this website: ₹6.4 Cr*
-* 3 BHK sizes advertised: approximately 2,673–2,930 sq. ft.
-* 4 BHK sizes advertised: approximately 3,964–4,382 sq. ft.
+* 3 BHK sizes advertised: approximately 2,673–2,939 sq. ft.
+* 4 BHK sizes advertised: approximately 3,750–4,328 sq. ft.
 * Community size: 20 acres
 * Developer information: Whiteland
 * Brand: WESTIN / Marriott
@@ -29,17 +29,31 @@ The website provides information about The WESTIN Residence Gurugram through an 
 
 ### 3 BHK Residences
 
-The website lists 3 BHK residences with sizes of approximately 2,673 sq. ft. and 2,930 sq. ft.
+The website lists 3 BHK residences with sizes of approximately 2,673 sq. ft. and 2,939 sq. ft.
 
 Advertised starting rate: ₹22,167 per sq. ft.
 
 ### 4 BHK Residences
 
-The website lists 4 BHK residences with sizes of approximately 3,964 sq. ft. and 4,382 sq. ft.
+The website lists 4 BHK residences with sizes of approximately 3,750 sq. ft. and 4,328 sq. ft.
 
 Advertised starting rate: ₹23,057 per sq. ft.
 
 Pricing and availability may change. Prospective buyers should confirm the latest price, inventory, specifications, taxes, charges, and payment terms with the authorized sales representative.
+
+## Floor Plans
+
+Detailed floor plan page: https://www.thewestinresidences.co/westin-residences-floor-plan.html
+
+Five layouts, saleable / carpet / balcony area in sq ft, with tower allocation:
+
+* 3 BHK Small — 2,673 / 1,431 / 431 — Towers 1, 2, 3, 4, 4A, 4B
+* 3 BHK Large — 2,939 / 1,577 / 482 — Towers 2, 3, 4, 4A
+* 4 BHK Small — 3,750 / 1,969 / 318 — Towers 7, 8, 9
+* 4 BHK Medium — 3,987 / 2,095 / 376 — Towers 5, 6
+* 4 BHK Large — 4,328 / 2,211 / 585 — Towers 5, 6
+
+Phase 1 (Towers 2, 3, 4, 4A, 4B; 848 homes) carries a RERA completion date of 30 September 2031.
 
 ## Payment Plan
 
