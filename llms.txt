@@ -11,7 +11,7 @@ The WESTIN Residence by Marriott offers ultra-luxury 3 BHK and 4 BHK residences 
 * Connectivity: Dwarka Expressway
 * Project status: New Launch
 * Residential configurations: 3 BHK and 4 BHK
-* Starting price advertised on this website: ₹6.4 Cr*
+* Pricing: shared on request through the authorised channel partner
 * 3 BHK sizes advertised: approximately 2,673–2,939 sq. ft.
 * 4 BHK sizes advertised: approximately 3,750–4,328 sq. ft.
 * Community size: 20 acres
@@ -31,15 +31,17 @@ The website provides information about The WESTIN Residence Gurugram through an 
 
 The website lists 3 BHK residences with sizes of approximately 2,673 sq. ft. and 2,939 sq. ft.
 
-Advertised starting rate: ₹22,167 per sq. ft.
 
 ### 4 BHK Residences
 
 The website lists 4 BHK residences with sizes of approximately 3,750 sq. ft. and 4,328 sq. ft.
 
-Advertised starting rate: ₹23,057 per sq. ft.
 
 Pricing and availability may change. Prospective buyers should confirm the latest price, inventory, specifications, taxes, charges, and payment terms with the authorized sales representative.
+
+## FAQ
+
+Answers to 26 common questions (developer, Marriott and ONVIA, location, sizes, towers, amenities, payment plan, RERA, possession): https://www.thewestinresidences.co/westin-residences-faq.html
 
 ## Brochure
 
