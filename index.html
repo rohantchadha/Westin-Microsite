@@ -30,7 +30,9 @@
 <link rel="preload" as="image" href="images/hero-night-pool.webp" fetchpriority="high" imagesrcset="images/hero-night-pool-800.webp 800w, images/hero-night-pool-1400.webp 1400w, images/hero-night-pool.webp 2129w" imagesizes="100vw">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <style>
 :root{
   --green-deep:#1B332A;
@@ -120,26 +122,26 @@ header.hero{position:relative;min-height:100svh;display:flex;align-items:flex-en
   radial-gradient(ellipse 110% 90% at 28% 88%,rgba(15,30,25,.78) 0%,rgba(15,30,25,.25) 55%,transparent 75%),
   linear-gradient(180deg,rgba(20,40,34,.62) 0%,rgba(20,40,34,.18) 38%,rgba(16,32,27,.55) 68%,rgba(13,26,22,.94) 100%)}
 .hero-content{width:100%;max-width:1200px;margin:0 auto;padding:130px var(--s4) var(--s5);position:relative}
-.hero-kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:var(--s3);display:flex;align-items:center;gap:18px;opacity:0;animation:fadeIn 1s var(--e-out) 900ms forwards;text-shadow:0 1px 10px rgba(0,0,0,.65)}
-.hero-kicker::before{content:"";width:54px;height:1px;background:var(--gold);flex:none;transform:scaleX(0);transform-origin:0 50%;animation:growX 1.1s var(--e-out) 1000ms forwards}
+.hero-kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin-bottom:var(--s3);display:flex;align-items:center;gap:18px;opacity:0;animation:fadeIn .8s var(--e-out) 160ms forwards;text-shadow:0 1px 10px rgba(0,0,0,.65)}
+.hero-kicker::before{content:"";width:54px;height:1px;background:var(--gold);flex:none;transform:scaleX(0);transform-origin:0 50%;animation:growX .9s var(--e-out) 220ms forwards}
 @keyframes fadeIn{to{opacity:1}}
 @keyframes growX{to{transform:scaleX(1)}}
 .hero h2.hero-display{font-size:clamp(44px,min(6.4vw,9.5svh),86px);font-weight:400;letter-spacing:.01em;max-width:13ch;text-shadow:0 2px 30px rgba(0,0,0,.45);font-family:var(--serif)}
 .hero h2.hero-display .w{display:inline-block;overflow:hidden;vertical-align:bottom}
-.hero h2.hero-display .w i{font-style:inherit;display:inline-block;transform:translateY(112%);animation:wordUp 1s var(--e-out) forwards;animation-delay:calc(1150ms + var(--wd))}
+.hero h2.hero-display .w i{font-style:inherit;display:inline-block;transform:translateY(112%);animation:wordUp 1s var(--e-out) forwards;animation-delay:calc(280ms + var(--wd))}
 .hero h2.hero-display em .w i{font-style:italic;color:var(--gold-soft)}
 .hero h1.hero-kicker{font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--gold-soft);margin:0 0 var(--s3);font-weight:500;font-family:var(--sans);text-shadow:0 1px 10px rgba(0,0,0,.65)}
 @keyframes wordUp{to{transform:none}}
-.hero-sub{margin-top:var(--s3);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);max-width:560px;text-shadow:0 1px 14px rgba(0,0,0,.5);opacity:0;transform:translateY(12px);animation:riseIn .9s var(--e-out) 2050ms forwards}
+.hero-sub{margin-top:var(--s3);font-size:15px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.85);max-width:560px;text-shadow:0 1px 14px rgba(0,0,0,.5);opacity:0;transform:translateY(12px);animation:riseIn .7s var(--e-out) 620ms forwards}
 @keyframes riseIn{to{opacity:1;transform:none}}
 .hero-ctas{margin-top:var(--s4);display:flex;gap:var(--s2);flex-wrap:wrap}
 .hero-ctas .btn{opacity:0;transform:translateY(12px);animation:riseIn .8s var(--e-out) forwards}
-.hero-ctas .btn:nth-child(1){animation-delay:2350ms}
-.hero-ctas .btn:nth-child(2){animation-delay:2480ms}
-.hero-strip{margin-top:var(--s4);border-top:1px solid rgba(195,165,114,.4);padding-top:var(--s3);display:flex;gap:var(--s5);flex-wrap:wrap;opacity:0;animation:fadeIn 1.2s var(--e-out) 2700ms forwards}
+.hero-ctas .btn:nth-child(1){animation-delay:820ms}
+.hero-ctas .btn:nth-child(2){animation-delay:900ms}
+.hero-strip{margin-top:var(--s4);border-top:1px solid rgba(195,165,114,.4);padding-top:var(--s3);display:flex;gap:var(--s5);flex-wrap:wrap;opacity:0;animation:fadeIn 1s var(--e-out) 1000ms forwards}
 .hero-strip div{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.72)}
 .hero-strip strong{display:block;font-family:var(--serif);font-size:30px;font-weight:500;color:#fff;letter-spacing:.01em;font-variant-numeric:lining-nums tabular-nums;font-feature-settings:"lnum","tnum"}
-.hero-scroll{position:absolute;right:var(--s4);bottom:var(--s6);display:flex;flex-direction:column;align-items:center;gap:12px;color:rgba(255,255,255,.55);font-size:10px;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;opacity:0;animation:fadeIn 1s var(--e-out) 3000ms forwards}
+.hero-scroll{position:absolute;right:var(--s4);bottom:var(--s6);display:flex;flex-direction:column;align-items:center;gap:12px;color:rgba(255,255,255,.55);font-size:10px;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;opacity:0;animation:fadeIn 1s var(--e-out) 1200ms forwards}
 .hero-scroll::after{content:"";width:1px;height:64px;background:linear-gradient(180deg,var(--gold),transparent);animation:scrollHint 2.2s var(--e-inout) infinite}
 @keyframes scrollHint{0%{transform:scaleY(0);transform-origin:0 0}45%{transform:scaleY(1);transform-origin:0 0}55%{transform:scaleY(1);transform-origin:0 100%}100%{transform:scaleY(0);transform-origin:0 100%}}
 
