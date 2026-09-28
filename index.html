@@ -450,9 +450,9 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": "RealEstateAgent",
       "@id": "https://www.thewestinresidences.co/#organization",
-      "name": "The Westin Residences Gurugram",
+      "name": "Absolute Realty",
       "url": "https://www.thewestinresidences.co/",
       "logo": {
         "@type": "ImageObject",
@@ -460,7 +460,12 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
       },
       "image": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp",
       "description": "Authorized channel partner for The Westin Residences by Whiteland in Sector 103, Dwarka Expressway, Gurugram.",
-      "sameAs": ["https://www.facebook.com/WestinResidencesGurugram/"],
+      "sameAs": [
+        "https://www.facebook.com/WestinResidencesGurugram/",
+        "https://absolute-realty.in/",
+        "https://www.instagram.com/absoluterealtygurgaon/",
+        "https://www.facebook.com/people/Shaloo-Agencies/100084306216430/"
+      ],
       "telephone": "+919910661395",
       "areaServed": {
         "@type": "City",
@@ -476,7 +481,10 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
         "@type": "ContactPoint",
         "telephone": "+919910661395",
         "contactType": "Sales",
-        "availableLanguage": ["English", "Hindi"]
+        "availableLanguage": [
+          "English",
+          "Hindi"
+        ]
       }
     },
     {
@@ -484,15 +492,21 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
       "@id": "https://www.thewestinresidences.co/#website",
       "url": "https://www.thewestinresidences.co/",
       "name": "The Westin Residences Gurugram",
-      "publisher": { "@id": "https://www.thewestinresidences.co/#organization" }
+      "publisher": {
+        "@id": "https://www.thewestinresidences.co/#organization"
+      }
     },
     {
       "@type": "WebPage",
       "@id": "https://www.thewestinresidences.co/#homepage",
       "url": "https://www.thewestinresidences.co/",
       "name": "The Westin Residences Gurugram | Luxury Apartments",
-      "isPartOf": { "@id": "https://www.thewestinresidences.co/#website" },
-      "about": { "@id": "https://www.thewestinresidences.co/#project" },
+      "isPartOf": {
+        "@id": "https://www.thewestinresidences.co/#website"
+      },
+      "about": {
+        "@id": "https://www.thewestinresidences.co/#project"
+      },
       "primaryImageOfPage": {
         "@type": "ImageObject",
         "url": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp"
@@ -505,7 +519,9 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
       "url": "https://www.thewestinresidences.co/",
       "description": "Luxury branded residences by Whiteland in Sector 103, Dwarka Expressway, Gurugram, offering premium 3 and 4 BHK apartments with world-class amenities.",
       "image": "https://www.thewestinresidences.co/images/clubhouse-aerial.webp",
-      "provider": { "@id": "https://www.thewestinresidences.co/#organization" },
+      "provider": {
+        "@id": "https://www.thewestinresidences.co/#organization"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Sector 103",
@@ -520,12 +536,36 @@ footer{background:var(--green-ink);color:rgba(247,244,238,.55);padding:var(--s5)
         "longitude": "76.9976"
       },
       "amenityFeature": [
-        { "@type": "LocationFeatureSpecification", "name": "Infinity Pool", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Clubhouse", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Fitness Centre", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Spa", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Concierge Services", "value": true },
-        { "@type": "LocationFeatureSpecification", "name": "Landscaped Gardens", "value": true }
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Infinity Pool",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Clubhouse",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Fitness Centre",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Spa",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Concierge Services",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Landscaped Gardens",
+          "value": true
+        }
       ],
       "petsAllowed": true
     }
